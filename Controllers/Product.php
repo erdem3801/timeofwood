@@ -201,7 +201,10 @@ class Product extends BaseController
          $update_data = array(
                'rank' =>$rank
          );
-         $this->model->update($id,$update_data);
+         $where_data = array(
+            'rank !=' => $rank
+         );
+         $this->model->where($where_data)->update($id,$update_data);
       }
 
   }
