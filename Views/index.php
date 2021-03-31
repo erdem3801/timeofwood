@@ -28,7 +28,7 @@
             <div class="card">
               <div class="content">
               <a href="<?php echo base_url($value['image_url']);  ?>" id="swipebox0" title="Time of wood" rel="gallery" class="thumbnail product-thumbnail">
-                <img class="card-img-top" src="<?php echo base_url($value['image_url']);  ?>" height="232" width="348" style="object-fit: scale-down;">
+                <img class="card-img-top" src="<?php echo base_url($value['image_url']);  ?>" height="160" width="640" style="object-fit: scale-down;">
               </a>
                 <div class="card-body">
                 
