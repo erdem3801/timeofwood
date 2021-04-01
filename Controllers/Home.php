@@ -3,31 +3,35 @@
 namespace App\Controllers;
 
 use App\Models\UserModel;
+use App\Models\product_galeri;
 class Home extends BaseController
 {
-	private $model;
-
+	private $model; 
 	function __construct()
     {
 
-	$this->model = new UserModel();
-
+	$this->model = new UserModel(); 
     }
 
 
 	public function index($page = "index")
-	{
+	{	
 		if (!is_file(APPPATH . '/Views/' . $page . '.php')) {
 			// Whoops, we don't have a page for that!
 			throw new \CodeIgniter\Exceptions\PageNotFoundException($page);
 		}
-
+		
 		$data['page'] = $page;
 		$data['product'] = $this->model->orderBy('rank','asc')->findAll();
+		$galeri_model = new product_galeri();
+		
+		$data['galeri']= $galeri_model->findAll();
+
+	
 
 		echo view('templates/header', $data);
 		echo view($page);
-		echo view('templates/footer');
+		echo view('templates/footer',$data);
 	}
 	public function send()
 	{

@@ -39,9 +39,9 @@
   </div>
 
   <hr class="divider" />
-  
+
   <div class="rounded-social-buttons mt-4">
-      <p>Pour visiter notre instagram cliqué sur le logo</p>
+    <p>Pour visiter notre instagram cliqué sur le logo</p>
     <a class="social-button instagram mr-12" href="https://www.instagram.com/Timeofwood1" target="_blank"><i class="fab fa-instagram"></i></a>
   </div>
   <div class="footer-copyright text-center py-3">
@@ -62,7 +62,7 @@
     glare: true,
     "max-glare": 0.5,
   });
- 
+
   VanillaTilt.init(document.querySelectorAll(".link-to-rea"), {
     max: 0,
     speed: 0,
@@ -85,13 +85,25 @@
   $(document).ready(function() {
 
     /* Basic Gallery */
-  
-  <?php for ($i=0; $i <=17 ; $i++) { ?>
-      $('#swipebox<?=$i?>').swipebox();
-    
-  <?php } ?>
-    
-  
+    <?php if(isset($product)) { foreach($product as $value){  ?>
+
+    $('#swipe<?= $value['product_id']; ?>').click(function(e) {
+      e.preventDefault();
+      $.swipebox([
+        {
+          href: '<?= $value['image_url'] ?>',
+          title: '<?php if($value['ptoduct_title']=='') echo 'galeri'; else echo $value['product_title']; ?>'
+        },
+        <?php if(isset($galeri)) { foreach($galeri as $galeri_value) { if($galeri_value['product_id']== $value['product_id']) { ?>
+        {
+          href: '<?= $galeri_value['image_url'] ?>',
+          title: '<?php if($value['ptoduct_title']=='') echo 'galeri'; else echo $value['product_title']; ?>'
+        },
+        <?php } } } ?>
+      ]);
+    });
+
+    <?php } } ?>
 
 
   });
@@ -121,9 +133,8 @@ Swal.fire({
   })
   </script>";
   }
-  
 }
- 
+
 ?>
 <!-- <script>
     var x = document.querySelector("video");

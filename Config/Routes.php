@@ -38,11 +38,13 @@ $routes->get('admin','User::login');
  
 $routes->group('product',['filter'=>'Auth'], function($routes){ 
 	
-	$routes->match(['get','post'],'ekle','Product::ekle');
 	$routes->get('sil/(:num)','Product::sil/$1');
+	$routes->get('galeri/sil/(:num)/(:num)','Product::galeri_sil/$1/$2');
 	$routes->get('/','Product::listele'); 
-	$routes->match(['get' , 'post'],'edit/(:num)','Product::edit/$1');
 	$routes->post('reorder','Product::reorder');
+	$routes->match(['get','post'],'ekle','Product::ekle');
+	$routes->match(['get' , 'post'],'edit/(:num)','Product::edit/$1');
+	$routes->match(['get','post'],'galeri/(:num)','Product::galeri/$1');
 });
 
 $routes->get('/', 'Home::index');

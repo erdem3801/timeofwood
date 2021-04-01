@@ -33,6 +33,9 @@
   <link href="<?php echo base_url('admin-assets');  ?>/css/black-dashboard.css?v=1.0.0" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="<?php echo base_url('admin-assets');  ?>/demo/demo.css" rel="stylesheet" />
+  <!-- Dropzene css include -->
+  <link rel="stylesheet" href="<?php echo base_url('admin-assets');  ?>/js/dropzone/dropzone.css">
+ 
 </head>
 
 

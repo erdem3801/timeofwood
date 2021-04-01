@@ -35,9 +35,12 @@
                  <td><?= $value['product_description']; ?></td>
                  <td><?= $value['product_dimension']; ?></td>
 
-                 <td class="text-right"  ><?= $value['product_price']; ?>"></td>
+                 <td class="text-right"  ><?= $value['product_price']; ?></td>
 
                  <td class="td-actions text-right">
+                 <a href="<?= base_url(); ?>/product/galeri/<?= $value['product_id']; ?>" type="button" rel="tooltip" class="btn btn-info btn-sm btn-icon">
+                    <i class="tim-icons icon-simple-add"></i>
+                </a>
                    <a href="<?= base_url(); ?>/product/edit/<?= $value['product_id']; ?>" type="button" rel="tooltip" class="btn btn-success btn-sm btn-icon">
                      <i class="tim-icons icon-settings"></i>
                    </a>
