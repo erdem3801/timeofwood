@@ -9,7 +9,7 @@
         </h5>
         <ul class="list-unstyled">
           <li>
-            <a href="<?php echo base_url('about'); ?>" class="text-white">A propos de nous</a>
+            <a href="<?php echo base_url('about'); ?>" class="text-white">À propos de nous</a>
           </li>
           <li>
             <a href="<?php echo base_url('projets'); ?>" class="text-white">Nos projets</a>

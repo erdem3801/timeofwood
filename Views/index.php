@@ -18,7 +18,7 @@
      Nos réalisations
     </h2>
     <h3 class="text-center text-white pb-5">
-    Cliqué sur le produit qui vous intéresse
+    Cliquez sur le produit qui vous intéresse
     </h3>
     <div class="row">
     <?php if(isset($product)){ foreach($product as $value){  ?>
