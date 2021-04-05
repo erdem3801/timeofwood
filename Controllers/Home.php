@@ -4,13 +4,16 @@ namespace App\Controllers;
 
 use App\Models\UserModel;
 use App\Models\product_galeri;
+use App\Models\about_model;
 class Home extends BaseController
 {
 	private $model; 
+
 	function __construct()
     {
 
 	$this->model = new UserModel(); 
+
     }
 
 
@@ -26,7 +29,10 @@ class Home extends BaseController
 		$galeri_model = new product_galeri();
 		
 		$data['galeri']= $galeri_model->findAll();
-
+		if($page == 'about'){
+			$about_model = new about_model();
+			$data["about_text"] = $about_model->find(1);
+		}
 	
 
 		echo view('templates/header', $data);

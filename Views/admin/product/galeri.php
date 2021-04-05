@@ -34,3 +34,25 @@
         </div>
     </div>
 </div>
+
+<script src="<?php echo base_url('admin-assets');  ?>/js/dropzone/dropzone.js"></script>
+<script>
+
+Dropzone.autoDiscover = false;
+var myDropzone = new Dropzone('.dropzone',{
+   dictDefaultMessage: "dosya yüklemek için bu alana dosyalarınızı sürükleyin yada tıklayın"
+});
+myDropzone.on('complete', function (param){
+    let obj = JSON.parse(param.xhr.response);
+    
+    var $view ='';
+        $view +=  '<div class="font-icon-list col-lg-3 col-md-3 col-sm-4 col-xs-6 col-xs-6">';
+        $view += '<div class="font-icon-detail">';
+        $view += '<img class="card-img-top" src="<?= base_url(); ?>/' + obj.data.image_url + '" alt="Card image cap" style="width: 20rem;" height="200px">';
+        $view += '<a href="<?= base_url("product/galeri/sil");  ?>'+'/'+obj.data.product_id+'/'+obj.data.galeri_id+'" class="btn btn-primary">sil</a> </div> </div>';
+      
+     $('#galeri-view').append($view);
+})
+
+
+</script>

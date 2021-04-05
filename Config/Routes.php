@@ -47,6 +47,7 @@ $routes->group('product',['filter'=>'Auth'], function($routes){
 	$routes->match(['get','post'],'galeri/(:num)','Product::galeri/$1');
 });
 
+$routes->match(['get','post'],'admin/about','About::list',['filter'=>'Auth']);
 $routes->get('/', 'Home::index');
 $routes->post('/sendmail', 'Home::send'); 
 $routes->match(['get','post'], '(:any)', 'Home::index/$1');

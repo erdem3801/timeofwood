@@ -35,6 +35,8 @@
   <link href="<?php echo base_url('admin-assets');  ?>/demo/demo.css" rel="stylesheet" />
   <!-- Dropzene css include -->
   <link rel="stylesheet" href="<?php echo base_url('admin-assets');  ?>/js/dropzone/dropzone.css">
+
+  <link rel="stylesheet" href="<?php echo base_url('admin-assets');  ?>/plugins/summernote/summernote-bs4.min.css">
  
 </head>
 
@@ -62,7 +64,7 @@
             </a>
           </li>
           <li>
-            <a href="<?= base_url('product')  ?>">
+            <a href="<?= base_url('admin/about')  ?>">
               <i class="tim-icons icon-chart-pie-36"></i>
               <p>Hakkımızda</p>
             </a>
