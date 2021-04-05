@@ -9,7 +9,7 @@
         </h5>
         <ul class="list-unstyled">
           <li>
-            <a href="<?php echo base_url('about'); ?>" class="text-white">propos de nous</a>
+            <a href="<?php echo base_url('about'); ?>" class="text-white">A propos de nous</a>
           </li>
           <li>
             <a href="<?php echo base_url('projets'); ?>" class="text-white">Nos projets</a>
@@ -27,7 +27,7 @@
         </h5>
         <ul class="list-unstyled">
           <li>Time Of Wood</li>
-          <li>Fransa/Paris.</li>
+          <li>France/Paris.</li>
           <li>06 64 03 33 43 </li>
 
           <a class="text-white" href=" mailto:timeofwood.gestion@gmail.com">

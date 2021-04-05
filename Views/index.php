@@ -15,10 +15,10 @@
 <div class="container-fluid dark">
   <div class="container">
     <h2 class="text-center text-white pb-5">
-     Nos réalisation
+     Nos réalisations
     </h2>
     <h3 class="text-center text-white pb-5">
-    Cliqué sur le prix du produit que vous etes intéressé
+    Cliqué sur le produit qui vous intéresse
     </h3>
     <div class="row">
     <?php if(isset($product)){ foreach($product as $value){  ?>
