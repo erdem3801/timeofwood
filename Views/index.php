@@ -75,7 +75,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-4 d-flex justify-content-center flex-column align-items-center">
+    <div class="col-md-6 d-flex justify-content-center flex-column align-items-center">
       <i class="fa fa-truck fa-4x"></i>
       <div class="informations">
         <p class="text-center text-uppercase font-weight-bold pt-4">
@@ -84,7 +84,7 @@
         <p class="text-center color-gold font-weight-bold">offerte</p>
       </div>
     </div>
-    <div class="col-md-4 d-flex justify-content-center flex-column align-items-center">
+    <div class="col-md-6 d-flex justify-content-center flex-column align-items-center">
       <img class="img-fluid homemade" src="assets/images/icones/hammer.png" alt="marteau" />
       <div class="informations">
         <p class="text-center text-uppercase font-weight-bold pt-4">
@@ -93,14 +93,6 @@
         <p class="text-center color-gold font-weight-bold">sur-mesure</p>
       </div>
     </div>
-    <div class="col-md-4 d-flex justify-content-center flex-column align-items-center">
-      <i class="fa fa-lock fa-4x"></i>
-      <div class="informations">
-        <p class="text-center text-uppercase font-weight-bold pt-4">
-          Paiement
-        </p>
-        <p class="text-center color-gold font-weight-bold">sécurisé</p>
-      </div>
-    </div>
+   
   </div>
 </div>
