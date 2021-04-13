@@ -51,6 +51,7 @@ $routes->match(['get','post'],'admin/about','About::list',['filter'=>'Auth']);
 $routes->get('/', 'Home::index');
 $routes->post('/sendmail', 'Home::send'); 
 $routes->match(['get','post'], '(:any)', 'Home::index/$1');
+$routes->match(['get','post'], '(:any)/(:num)', 'Home::index/$1/$2');
 
 
 /*
