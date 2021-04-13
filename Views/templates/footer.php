@@ -45,7 +45,7 @@
     <a class="social-button instagram mr-12" href="https://www.instagram.com/Timeofwood1" target="_blank"><i class="fab fa-instagram"></i></a>
   </div>
   <div class="footer-copyright text-center py-3">
-    <a href="<?= base_url();  ?>?count=1"> ©</a> 2021 Copyright -
+    <a href="./?count=1"> ©</a> 2021 Copyright -
     <a href="<?= base_url();  ?>" class="color-gold">
       timeofwood.fr</a>
   </div>
