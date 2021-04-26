@@ -4,13 +4,20 @@ namespace App\Controllers;
 
 use App\Models\UserModel;
 use App\Models\product_galeri;
-use App\Models\about_model; 
-use CodeIgniter\HTTP\IncomingRequest;
+use App\Models\about_model;  
 
 class Home extends BaseController
 {
+	/**
+	 * 
+	 * @var HTTP/IncomingRequest
+	 * 
+	 * 
+	 */
+	protected $request;
 
 	private $model;
+
 	
 
 	function __construct()
