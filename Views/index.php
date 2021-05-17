@@ -27,7 +27,7 @@
           <div class="gfg">
             <div class="card">
               <div class="content">
-              <a  id="swipe<?= $value['product_id']; ?>" title="Time of wood" rel="gallery" class="thumbnail product-thumbnail" href="#">
+              <a  id="swipe<?= $value['product_id']; ?>" title="Time of wood" rel="gallery" class="thumbnail product-thumbnail" href="javascript:void(0)">
                 <img class="card-img-top" src="<?php echo base_url($value['image_url']);  ?>" height="160" width="640" style="object-fit: scale-down;">
               </a>
                 <div class="card-body">
