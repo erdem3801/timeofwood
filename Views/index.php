@@ -37,7 +37,7 @@
                   
                 
                   <p class="card-text  ">Dimensions: <spanclass="font-weight-bold"> <?php echo $value['product_dimension']; ?> </span></p>
-                  <p class="card-text  ">Prix : <a href="<?= base_url('contact')?>" class="font-weight-bold price"><?php echo $value['product_price']; ?></a></p>
+                  <p class="card-text  ">Prix : <a href="<?= base_url($value['redirectUrl'])?>" class="font-weight-bold price"><?php echo $value['product_price']; ?></a></p>
                 </div>
               </div>
             </div>

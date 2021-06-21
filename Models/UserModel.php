@@ -15,7 +15,7 @@ class UserModel extends Model
     protected $returnType     = 'array';
     protected $useSoftDeletes = true;
 
-    protected $allowedFields = ['image_url','large_image_url', 'product_description' ,'product_price','product_dimension','product_title','rank'];
+    protected $allowedFields = ['image_url','large_image_url', 'product_description' ,'product_price','product_dimension','product_title','rank' ,'redirectUrl'];
 
     protected $useTimestamps = false;
     protected $createdField  = 'created_at';

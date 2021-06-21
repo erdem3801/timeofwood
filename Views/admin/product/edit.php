@@ -47,6 +47,14 @@
                       </div>
                     </div>
                   </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label>Yönlendirme Adresi</label>
+                        <input type="text" name="redirectUrl" class="form-control" placeholder="Yönlendirme Adresi" value="<?= ($product['redirectUrl'] != 'javascript:void(0)') ? $product['redirectUrl'] :'';  ?>">
+                      </div>
+                    </div>
+                  </div>
                   <div class="card-footer"> 
                      <input type="submit" name="submit" class="btn btn-fill btn-primary" value="Güncelle">
                      <a href="<?php echo base_url('product')  ?>" class="btn btn-fill btn-danger">İptal</a>

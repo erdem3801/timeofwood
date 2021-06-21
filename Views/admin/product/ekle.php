@@ -54,6 +54,15 @@
                     </div>
                   </div>
 
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label>Yönlendirme Adresi</label>
+                        <input type="text" name="redirectUrl" class="form-control" placeholder="Yönlendirme Adresi" value="">
+                      </div>
+                    </div>
+                  </div>
+
          
                   <div class="card-footer">
                      <input type="submit" name="submit" class="btn btn-fill btn-primary" value="Ekle">

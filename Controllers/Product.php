@@ -30,6 +30,7 @@ class Product extends BaseController
       $data = array();
       if (isset($_POST['submit'])) {
 
+    
          $rand = rand(0, 1000);
          $target_dir = "images/upload/$rand";
          $name_speace = 'image';
@@ -74,7 +75,8 @@ class Product extends BaseController
                   'product_description' => $this->request->getPost('description'),
                   'product_price' => $this->request->getPost('price'),
                   'product_dimension' => $this->request->getPost('dimension'),
-                  'product_title' => $this->request->getPost('title')
+                  'product_title' => $this->request->getPost('title'),
+                  'redirectUrl'  => $this->request->getPost('redirectUrl')
 
                ];
 
@@ -105,7 +107,7 @@ class Product extends BaseController
 
       $data['product'] = $this->model->find($id);
       if (isset($_POST['submit'])) {
-
+      
          if ($_FILES['image']['tmp_name']) {
             $rand = rand(0, 1000);
             $target_dir = "images/upload/$rand";
@@ -151,10 +153,11 @@ class Product extends BaseController
                      'product_description' => $this->request->getPost('description'),
                      'product_price' => $this->request->getPost('price'),
                      'product_dimension' => $this->request->getPost('dimension'),
-                     'product_title' => $this->request->getPost('title')
-
+                     'product_title' => $this->request->getPost('title'),
+                     'redirectUrl'  => $this->request->getPost('redirectUrl')
+   
                   ];
-
+             
                   $this->model->update($id, $data);
                   return redirect()->to(base_url('product'));
                } else {
@@ -167,7 +170,9 @@ class Product extends BaseController
                'product_description' => $this->request->getPost('description'),
                'product_price' => $this->request->getPost('price'),
                'product_dimension' => $this->request->getPost('dimension'),
-               'product_title' => $this->request->getPost('title')
+               'product_title' => $this->request->getPost('title'),
+               'redirectUrl'  => $this->request->getPost('redirectUrl')
+
 
             ];
             $this->model->update($id, $data);
@@ -219,7 +224,7 @@ class Product extends BaseController
          $file->move(ROOTPATH . $path, $name);
 
          $model_data = array(
-            
+
             'product_id' => $id,
             'image_url' => $path . '/' . $name
          );
@@ -234,22 +239,23 @@ class Product extends BaseController
                'message' => 'resim yüklendi',
                'data'  => $model_data
             ));
-         }  
+         }
       } else if ($this->request->getMethod() == 'get') {
          $data['product_id'] = $id;
-   
-         $data['galeri_view']  = $galeri_model->where(array('product_id'=> $id))->findAll();
-         
+
+         $data['galeri_view']  = $galeri_model->where(array('product_id' => $id))->findAll();
+
          echo view('admin/template/header');
          echo view('admin/product/galeri', $data);
          echo view('admin/template/footer');
       }
    }
-   public function galeri_sil($product_id,$galeri_id){
+   public function galeri_sil($product_id, $galeri_id)
+   {
       $galeri_model = new product_galeri();
       $galeri_model->delete($galeri_id);
       $errors  = $galeri_model->errors();
-      
+
       return redirect()->to(base_url("product/galeri/{$product_id}"));
    }
 }
